@@ -1,0 +1,26 @@
+.input-group-text{
+  border: transparent;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  display: none;
+}
+
+.navbar-toggler .close-icon {
+  display: inline-block;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  display: inline-block;
+}
+
+.navbar-toggler.collapsed .close-icon {
+  display: none;
+}
+
+.center-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
