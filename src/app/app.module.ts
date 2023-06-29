@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FireStoryComponent } from './components/fire-story/fire-story.component';
 import { StoriesComponent } from './components/stories/stories.component';
-import { OverdoseComponent } from './components/stories/overdose/overdose.component';
+import { OverdoseComponent } from './components/stories/module-stories/overdose/overdose.component';
 
 
 @NgModule({
