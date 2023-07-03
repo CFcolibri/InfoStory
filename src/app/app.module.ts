@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FireStoryComponent } from './components/fire-story/fire-story.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { OverdoseComponent } from './components/stories/module-stories/overdose/overdose.component';
+import { DataOverdoseService } from './_services/data-overdose.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,9 +30,10 @@ import { OverdoseComponent } from './components/stories/module-stories/overdose/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ DataOverdoseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
