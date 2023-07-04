@@ -1,5 +1,21 @@
 .line {
   fill: none;
-  stroke: steelblue;
+  /* stroke: steelblue; */
   stroke-width: 2px;
 }
+
+.male-line {
+  fill: none;
+  stroke: blue;
+  stroke-width: 2px;
+}
+
+.female-line {
+  fill: none;
+  stroke: green;
+  stroke-width: 2px;
+}
+
+
+
+
