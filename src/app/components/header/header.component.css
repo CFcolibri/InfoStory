@@ -11,8 +11,8 @@
 
 .navbar-toggler{
   border-color: transparent;
-  background-color: rgb(172, 122, 229);
-  color: rgb(131, 60, 210);
+  background-color: rgb(67, 67, 243);
+  color: rgb(8, 8, 223);
 }
 .navbar-toggler .close-icon {
   display: inline-block;
@@ -47,14 +47,14 @@
 }
 
 .navbar {
-  border-bottom: 1px solid rgb(131, 60, 210);
+  border-bottom: 1px solid rgb(8, 8, 223);
 }
 
 #Infostories{
   /* background-color: rebeccapurple; */
   font-weight: bold;
   -webkit-text-stroke-width: 2px;
- -webkit-text-stroke-color: rgb(131, 60, 210);
+ -webkit-text-stroke-color: rgb(8, 8, 223);
   -webkit-text-fill-color: transparent;
   font-size: 32px;
 }
@@ -64,7 +64,7 @@
     -webkit-text-fill-color: transparent;
   }
   100% {
-    -webkit-text-fill-color: rgb(131, 60, 210);
+    -webkit-text-fill-color: rgb(8, 8, 223);
   }
 }
 
