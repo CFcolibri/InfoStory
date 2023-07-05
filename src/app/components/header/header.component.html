@@ -1,40 +1,45 @@
 
 <nav class="navbar navbar-expand-lg bg-transparent ">
-  <div class="container-fluid" >
+  <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'" aria-label="Toggle navigation" [ngClass]="{'collapsed': !isMenuExpanded}">
-      <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon"></span>
+      <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon" ></span>
       <span [ngClass]="{'d-none': !isMenuExpanded}" class="close-icon">X</span>
     </button>
-    <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02" >
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-nav">
         <li class="nav-item">
-          <a class="nav-link" id="about" style="color: aqua;" aria-current="page" [routerLink]="['/about']">About</a>
+          <a class="nav-link" id="Infostories" style="color: rgb(131, 60, 210)"
+          [class.animate-fill]="animateInfoStories"
+          [routerLink]="['/']"
+          (click)="toggleMenu()">InfoStories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="stories" style="color: aqua;" [routerLink]="['/stories']">Stories</a>
+          <a class="nav-link" id="about" style="color:rgb(131, 60, 210);" aria-current="page" [routerLink]="['/about']">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="stories" style="color: aqua;" [routerLink]="['/']">InfoStories</a>
+          <a class="nav-link" id="stories" style="color: rgb(131, 60, 210);" [routerLink]="['/stories']">Stories</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item center-nav">
+          <a class="nav-link" id="subscribe" style="color: rgb(131, 60, 210)" [routerLink]="['/subscribe']">subscribe</a>
         </li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item center-nav">
-          <a class="nav-link" id="subscribe" style="color: aqua;" [routerLink]="['/subscribe']">subscribe</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item center-nav">
-          <a class="nav-link" id="contact" style="color: aqua;" [routerLink]="['/contact']">Contact</a>
+          <a class="nav-link" id="contact" style="color: rgb(131, 60, 210)" [routerLink]="['/contact']">Contact</a>
         </li>
       </ul>
       <form class="d-flex"  role="search">
           <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
-            <i class="fa fa-search" style="color: aqua;"></i>
-            <span class="ms-1" style="color: aqua;">Search</span>
+            <i class="fa fa-search" style="color: rgb(131, 60, 210)"></i>
+            <span class="ms-1" style="color: rgb(131, 60, 210)">Search</span>
           </span>
       </form>
     </div>
   </div>
 </nav>
+
 

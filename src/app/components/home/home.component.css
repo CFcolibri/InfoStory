@@ -82,3 +82,53 @@ img {
   visibility: hidden;
   will-change: transform, opacity;
 }
+
+
+/* .new */
+
+.logo-animation {
+  animation: rotate 2s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.line1,
+.line2,
+.circle,
+.i-shape {
+  transform-origin: center center;
+  animation: fadeIn 1s 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.i-shape {
+  fill:rgb(131, 60, 210);
+  font-size: 64px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+.circle{
+  fill: rgb(131, 60, 210);
+}
+

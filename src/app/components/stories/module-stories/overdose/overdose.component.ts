@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DataOverdoseService } from '../../../../_services/data-overdose.service';
 
 import * as d3 from 'd3';
@@ -134,3 +134,6 @@ export class OverdoseComponent implements OnInit {
       .style('fill', 'black');
   }
 }
+
+
+

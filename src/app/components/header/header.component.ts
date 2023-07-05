@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isMenuExpanded: boolean = false;
+  animateInfoStories: boolean = false;
 
   toggleMenu() {
     this.isMenuExpanded = !this.isMenuExpanded;
+    this.animateInfoStories = false;
+    setTimeout(() => {
+      this.animateInfoStories = !this.animateInfoStories;
+    }, 300);
   }
 }
