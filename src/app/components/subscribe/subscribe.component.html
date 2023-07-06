@@ -1,0 +1,11 @@
+
+<div class="subscribe-container">
+  <div class="input-container">
+    <span class="envelope"><i class="fas fa-envelope"></i></span>
+    <input type="email" placeholder="Your email" [(ngModel)]="email" />
+    <span class="clear-icon" (click)="clearInput()"><i class="fas fa-times"></i></span>
+  </div>
+  <button (click)="onButtonClick()" [class.animate__rubberBand]="isClicked">Subscribe</button>
+</div>
+
+

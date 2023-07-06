@@ -1,9 +1,19 @@
 
-<main>
-  <app-header></app-header>
-<div class="container">
-  <router-outlet></router-outlet>
+<div [ngClass]="{
+  'orange-bg': isRouteActive('/subscribe'),
+  'yellow-bg': isRouteActive('/'),
+  'green-bg': isRouteActive('/stories'),
+
+}">
+
+
+  <main>
+    <app-header></app-header>
+    <div class="container" >
+      <router-outlet></router-outlet>
+    </div>
+  </main>
 </div>
-</main>
-<!-- <app-home></app-home> -->
+
+
 

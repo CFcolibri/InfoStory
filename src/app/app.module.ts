@@ -14,6 +14,8 @@ import { StoriesComponent } from './components/stories/stories.component';
 import { OverdoseComponent } from './components/stories/module-stories/overdose/overdose.component';
 import { DataOverdoseService } from './_services/data-overdose.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SubscribeComponent } from './components/subscribe/subscribe.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,13 +27,15 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FireStoryComponent,
     StoriesComponent,
-    OverdoseComponent
+    OverdoseComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [ DataOverdoseService],
   bootstrap: [AppComponent]
