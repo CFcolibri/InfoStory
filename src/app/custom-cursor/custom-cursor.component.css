@@ -1,0 +1,75 @@
+
+
+/* .circle {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: transform 0.3s;
+}
+
+
+.circle.large {
+  width: 130px;
+  height: 50px;
+  border-radius: 50% / 80% 60%;
+  transform: scale(1.5);
+}
+
+.circle.medium {
+  width: 20px;
+  height: 10px;
+  border-radius: 50% / 60% 40%;
+  transform: scale(1.5);
+} */
+
+
+/* .circle {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: transform 0.3s;
+}
+
+.border-box {
+  position: fixed;
+  top: -12px;
+  left: -12px;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(8, 8, 223);
+  transition: transform 0.3s;
+} */
+
+.circle {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: transform 0.3s;
+}
+
+.circle.large {
+  transform: scale(1.5);
+}
+
+.circle.medium {
+  transform: scale(1.2);
+}
