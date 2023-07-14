@@ -1,115 +1,53 @@
-<!--
-<nav class="navbar navbar-expand-lg bg-transparent ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'" aria-label="Toggle navigation" [ngClass]="{'collapsed': !isMenuExpanded}">
-      <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon" ></span>
-      <span [ngClass]="{'d-none': !isMenuExpanded}" class="close-icon">X</span>
-    </button>
-    <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02" >
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-nav">
-        <li class="nav-item">
-          <a class="nav-link" id="Infostories" style="color: rgb(8, 8, 223);"
-          [class.animate-fill]="animateInfoStories"
-          [routerLink]="['/']"
-          (click)="toggleMenu()">InfoStories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="about" style="color:rgb(8, 8, 223);" aria-current="page" [routerLink]="['/about']">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="stories" style="color: rgb(8, 8, 223);" [routerLink]="['/stories']">Stories</a>
-        </li>
 
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item center-nav">
-          <a class="nav-link" id="subscribe" style="color: rgb(8, 8, 223)" [routerLink]="['/subscribe']">subscribe</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item center-nav">
-          <a class="nav-link" id="contact" style="color: rgb(8, 8, 223)" [routerLink]="['/contact']">Contact</a>
-        </li>
-      </ul>
-      <form class="d-flex"  role="search">
-          <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
-            <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
-            <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
-          </span>
-      </form>
-    </div>
-  </div>
-</nav>
-
- -->
-
-<!--
- <nav class="navbar navbar-expand-lg bg-transparent">
+<nav class="navbar navbar-expand-lg bg-transparent" (mousemove)="onMousemove($event)">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'" aria-label="Toggle navigation" [ngClass]="{'collapsed': !isMenuExpanded}">
       <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon"></span>
       <span [ngClass]="{'d-none': !isMenuExpanded}" class="close-icon">X</span>
     </button>
-    <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-nav">
-        <li class="nav-item">
-          <a class="nav-link" id="Infostories" style="color: rgb(8, 8, 223);" [class.animate-fill]="animateInfoStories" [routerLink]="['/']" (click)="toggleMenu()">InfoStories</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" id="about" style="color:rgb(8, 8, 223);" aria-current="page" [routerLink]="['/about']">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="stories" style="color: rgb(8, 8, 223);" [routerLink]="['/stories']">Stories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="subscribe" style="color: rgb(8, 8, 223)" [routerLink]="['/subscribe']">subscribe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="contact" style="color: rgb(8, 8, 223)" [routerLink]="['/contact']">Contact</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
-          <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
-          <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
-        </span>
-      </form>
-    </div>
-  </div>
-</nav> -->
 
-<nav class="navbar navbar-expand-lg bg-transparent">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuExpanded ? 'true' : 'false'" aria-label="Toggle navigation" [ngClass]="{'collapsed': !isMenuExpanded}">
-      <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon"></span>
-      <span [ngClass]="{'d-none': !isMenuExpanded}" class="close-icon">X</span>
-    </button>
     <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-nav" style="justify-content: start;">
         <li class="nav-item">
           <div class="left-nav">
-            <a class="nav-link" id="Infostories" style="color: rgb(8, 8, 223);" [class.animate-fill]="animateInfoStories" [routerLink]="['/']" (click)="toggleMenu()">InfoStories</a>
+            <a class="nav-link" id="Infostories" [class.animate-fill]="animateInfoStories" [routerLink]="['/']"
+              (click)="toggleMenu(); setNavLinkActive('Infostories')" (mouseenter)="onNavLinkHover('Infostories')"
+              (mouseleave)="onNavLinkLeave('Infostories')" [class.active]="isNavLinkActive['Infostories']">
+              InfoStories
+              <span *ngIf="isNavLinkHovered['Infostories'] || isNavLinkActive['Infostories']" class="nav-link-overlay"></span>
+            </a>
           </div>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0 center-nav">
-
         <li class="nav-item">
-          <a class="nav-link" id="about" style="color:rgb(8, 8, 223);" aria-current="page" [routerLink]="['/about']">About</a>
+          <a class="nav-link" id="about" [class.active]="isNavLinkActive['about']" [routerLink]="['/about']"
+            (click)="setNavLinkActive('about')" (mouseenter)="onNavLinkHover('about')" (mouseleave)="onNavLinkLeave('about')">
+            About
+            <span *ngIf="isNavLinkHovered['about'] || isNavLinkActive['about']" class="nav-link-overlay"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="stories" style="color: rgb(8, 8, 223);" [routerLink]="['/stories']">Stories</a>
+          <a class="nav-link" id="stories" [class.active]="isNavLinkActive['stories']" [routerLink]="['/stories']"
+            (click)="setNavLinkActive('stories')" (mouseenter)="onNavLinkHover('stories')" (mouseleave)="onNavLinkLeave('stories')">
+            Stories
+            <span *ngIf="isNavLinkHovered['stories'] || isNavLinkActive['stories']" class="nav-link-overlay"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="subscribe" style="color: rgb(8, 8, 223)" [routerLink]="['/subscribe']">subscribe</a>
+          <a class="nav-link" id="subscribe" [class.active]="isNavLinkActive['subscribe']" [routerLink]="['/subscribe']"
+            (click)="setNavLinkActive('subscribe')" (mouseenter)="onNavLinkHover('subscribe')" (mouseleave)="onNavLinkLeave('subscribe')">
+            subscribe
+            <span *ngIf="isNavLinkHovered['subscribe'] || isNavLinkActive['subscribe']" class="nav-link-overlay"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="contact" style="color: rgb(8, 8, 223)" [routerLink]="['/contact']">Contact</a>
+          <a class="nav-link" id="contact" [class.active]="isNavLinkActive['contact']" [routerLink]="['/contact']"
+            (click)="setNavLinkActive('contact')" (mouseenter)="onNavLinkHover('contact')" (mouseleave)="onNavLinkLeave('contact')">
+            Contact
+            <span *ngIf="isNavLinkHovered['contact'] || isNavLinkActive['contact']" class="nav-link-overlay"></span>
+          </a>
         </li>
         <form class="d-flex" role="search">
           <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
@@ -118,9 +56,7 @@
           </span>
         </form>
       </ul>
-
     </div>
   </div>
 </nav>
-
 

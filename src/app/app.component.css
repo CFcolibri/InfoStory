@@ -9,3 +9,23 @@
 .green-bg{
   background-color: rgba(7, 158, 52, 0.292);
 }
+
+.circle-cursor {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: transform 0.3s;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}

@@ -1,19 +1,17 @@
-
 <div [ngClass]="{
   'orange-bg': isRouteActive('/subscribe'),
   'yellow-bg': isRouteActive('/'),
   'green-bg': isRouteActive('/stories'),
-
-}">
-
+}" (mousemove)="updateCursorPosition($event)">
+  <div class="circle-cursor" [style.left.px]="cursorX" [style.top.px]="cursorY" *ngIf="!isHoveringHeaderNavLinks"></div>
+  <!-- <div class="circle-cursor" [style.left.px]="cursorX" [style.top.px]="cursorY" *ngIf="!isHoveringHeaderNavLinks"></div> -->
 
   <main>
-    <app-header></app-header>
-    <div class="container" >
+    <app-header (mousemove)="updateCursorPosition($event)" (mouseenter)="onHeaderMouseEnter()" (mouseleave)="onHeaderMouseLeave()"></app-header>
+    <div class="container">
       <router-outlet></router-outlet>
     </div>
   </main>
 </div>
-
 
 

@@ -66,3 +66,50 @@
 }
 
 
+/* Rest of the styles */
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: all 0.3s ease;
+}
+
+.nav-link#Infostories .nav-link-overlay {
+  width: 200px; /* Increase the width for InfoStories */
+  height: 60px; /* Increase the height for InfoStories */
+}
+.nav-link:hover .nav-link-overlay {
+  opacity: 1;
+}
+
+.nav-link:active .nav-link-overlay {
+  background-color: rgb(8, 8, 223);
+  opacity: 1;
+}
+
+.nav-link.active .nav-link-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid rgb(8, 8, 223);
+  transition: all 4.3s ease;
+}
+
+/* Rest of the styles */

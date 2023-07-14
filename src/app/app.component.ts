@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +8,27 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'InfoStories';
+  isNavLinkActive: boolean = false;
+
+  cursorX!: number;
+  cursorY!: number;
+
+  isHoveringHeaderNavLinks: boolean = false;
 
   constructor(private router: Router) { }
+
+  updateCursorPosition(event: MouseEvent) {
+    this.cursorX = event.clientX;
+    this.cursorY = event.clientY;
+  }
+
+  onHeaderMouseEnter() {
+    this.isHoveringHeaderNavLinks = false;
+  }
+
+  onHeaderMouseLeave() {
+    this.isHoveringHeaderNavLinks = false;
+  }
 
   isRouteActive(route: string): boolean {
     return this.router.url === route;

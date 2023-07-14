@@ -1,0 +1,7 @@
+.circle-cursor {
+  cursor: none; /* Hide the default cursor */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000; /* Customize the color of the circle */
+}
