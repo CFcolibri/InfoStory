@@ -13,6 +13,7 @@ export class HeaderComponent {
   isNavLinkHovered: { [key: string]: boolean } = {};
   isNavLinkActive: { [key: string]: boolean } = {};
   @Output() mousemove: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
+  @Output() hoverHeaderNavLinks: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   isHoveringHeader: boolean = false;
 
@@ -28,10 +29,12 @@ export class HeaderComponent {
 
   onNavLinkHover(id: string) {
     this.isNavLinkHovered[id] = true;
+    this.hoverHeaderNavLinks.emit(true);
   }
 
   onNavLinkLeave(id: string) {
     this.isNavLinkHovered[id] = false;
+    this.hoverHeaderNavLinks.emit(false);
   }
 
   setNavLinkActive(id: string) {
@@ -55,6 +58,7 @@ export class HeaderComponent {
 
   onHeaderMouseLeave() {
     this.isHoveringHeader = false;
+    this.hoverHeaderNavLinks.emit(false);
   }
 
   isActiveRoute(routePath: string) {
