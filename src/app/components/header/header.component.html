@@ -22,14 +22,8 @@
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0 center-nav">
         <li class="nav-item">
-          <a class="nav-link" id="about" [class.active]="isNavLinkActive['about']" [routerLink]="['/about']"
-            (click)="setNavLinkActive('about')" (mouseenter)="onNavLinkHover('about')" (mouseleave)="onNavLinkLeave('about')">
-            About
-            <span *ngIf="isNavLinkHovered['about'] || isNavLinkActive['about']" class="nav-link-overlay"></span>
-          </a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" id="stories" [class.active]="isNavLinkActive['stories']" [routerLink]="['/stories']"
+          style="color: rgb(8, 8, 223)"
             (click)="setNavLinkActive('stories')" (mouseenter)="onNavLinkHover('stories')" (mouseleave)="onNavLinkLeave('stories')">
             Stories
             <span *ngIf="isNavLinkHovered['stories'] || isNavLinkActive['stories']" class="nav-link-overlay"></span>
@@ -37,6 +31,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="subscribe" [class.active]="isNavLinkActive['subscribe']" [routerLink]="['/subscribe']"
+          style="color: rgb(8, 8, 223)"
             (click)="setNavLinkActive('subscribe')" (mouseenter)="onNavLinkHover('subscribe')" (mouseleave)="onNavLinkLeave('subscribe')">
             subscribe
             <span *ngIf="isNavLinkHovered['subscribe'] || isNavLinkActive['subscribe']" class="nav-link-overlay"></span>
@@ -44,17 +39,29 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="contact" [class.active]="isNavLinkActive['contact']" [routerLink]="['/contact']"
+          style="color: rgb(8, 8, 223)"
             (click)="setNavLinkActive('contact')" (mouseenter)="onNavLinkHover('contact')" (mouseleave)="onNavLinkLeave('contact')">
             Contact
             <span *ngIf="isNavLinkHovered['contact'] || isNavLinkActive['contact']" class="nav-link-overlay"></span>
           </a>
         </li>
-        <form class="d-flex" role="search">
+        <li class="nav-item">
+          <form class="d-flex" role="search">
+            <a class="nav-link" id="search" [class.active]="isNavLinkActive['search']" [routerLink]="['/subscribe']"
+            (click)="setNavLinkActive('search')" (mouseenter)="onNavLinkHover('search')" (mouseleave)="onNavLinkLeave('search')"
+             style="background-color: transparent; margin-top: 15px;">
+              <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
+              <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
+              <span *ngIf="isNavLinkHovered['search'] || isNavLinkActive['search']" class="nav-link-overlay"></span>
+            </a>
+          </form>
+        </li>
+        <!-- <form class="d-flex" role="search">
           <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
             <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
             <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
           </span>
-        </form>
+        </form> -->
       </ul>
     </div>
   </div>

@@ -65,8 +65,12 @@
   animation: fillAnimation 2s linear forwards;
 }
 
-
-/* Rest of the styles */
+.nav-item{
+  margin-right: 50px;
+}
+.left-nav{
+  margin-left: 30px;
+}
 
 .nav-link {
   position: relative;
