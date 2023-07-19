@@ -6,7 +6,6 @@
       <span [ngClass]="{'d-none': isMenuExpanded}" class="navbar-toggler-icon"></span>
       <span [ngClass]="{'d-none': !isMenuExpanded}" class="close-icon">X</span>
     </button>
-
     <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuExpanded}" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-nav" style="justify-content: start;">
         <li class="nav-item">
@@ -20,6 +19,7 @@
           </div>
         </li>
       </ul>
+
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0 center-nav">
         <li class="nav-item">
           <a class="nav-link" id="stories" [class.active]="isNavLinkActive['stories']" [routerLink]="['/stories']"
@@ -33,7 +33,7 @@
           <a class="nav-link" id="subscribe" [class.active]="isNavLinkActive['subscribe']" [routerLink]="['/subscribe']"
           style="color: rgb(8, 8, 223)"
             (click)="setNavLinkActive('subscribe')" (mouseenter)="onNavLinkHover('subscribe')" (mouseleave)="onNavLinkLeave('subscribe')">
-            subscribe
+            Subscribe
             <span *ngIf="isNavLinkHovered['subscribe'] || isNavLinkActive['subscribe']" class="nav-link-overlay"></span>
           </a>
         </li>
@@ -56,14 +56,14 @@
             </a>
           </form>
         </li>
-        <!-- <form class="d-flex" role="search">
-          <span class="input-group-text center-nav" style="background-color: transparent; margin-top: 15px;">
-            <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
-            <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
-          </span>
-        </form> -->
       </ul>
     </div>
   </div>
 </nav>
+
+
+
+
+
+
 

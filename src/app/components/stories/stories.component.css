@@ -13,65 +13,84 @@
     }
   }
 
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .card-img-container {
+    position: relative;
+  }
+
+  .card-img-top{
+    border-radius: 0;
+  }
+
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover .card-img-overlay {
+    opacity: 1;
+  }
+
+  .read-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 106, 255, 0.231);
+    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    /* transition: opacity 1.3s; */
+  }
+
+  .read-overlay h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    /* transition: opacity 0.3s; */
+  }
+
+  #read{
+    color: rgb(208, 0, 255);
+    font-size: 52px;
+    font-family:Baguet Script;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 3.5);
+  }
+
+  .underline-heading {
+    color: black;
+
+    font-size: 30px;
+  }
+  .card-text{
+    font-size: 30px;
+    color:rgb(107, 107, 109);
+
+  }
+
+  .card-img-overlay:hover .read-overlay {
+    opacity: 1;
+    animation: fadeIn 1.5s forwards;
+  }
 
 
-/* new */
-#read{
-  color: rgb(255, 0, 238);
-  font-size: 52px;
-  font-family:Baguet Script;
-  margin-bottom: 70px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 3.5);
-}
-
-.card-text{
-  /* padding-top: 0; */
-  color:rgb(107, 107, 109);
-}
-
-.underline-heading {
-  color: black;
-  text-decoration: underline;
-  text-decoration-color: rgb(8, 8, 223) ;
-}
-
-.card-img-overlay {
-  position: relative;
-  display: inline-block;
-}
-
-.read-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.read-overlay span {
-  /* color: white; */
-  font-size: 24px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.card-img-overlay:hover .read-overlay {
-  opacity: 1;
-  animation: fadeIn 1.5s forwards;
-}
-
-
-.card-img-overlay:hover .read-overlay span {
-  opacity: 1;
-  animation: fadeIn 1.5s forwards;
-}
 
 @keyframes fadeIn {
   0% {
