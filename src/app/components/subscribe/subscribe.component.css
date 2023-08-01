@@ -11,6 +11,9 @@
 .input-container {
   position: relative;
 }
+.animated {
+  width: 350px;
+}
 
 .input-container .envelope {
   position: absolute;
