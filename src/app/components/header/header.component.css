@@ -50,6 +50,7 @@
  -webkit-text-stroke-color: rgb(8, 8, 223);
   -webkit-text-fill-color: transparent;
   font-size: 32px;
+  font-family: Gopher;
 }
 
 @keyframes fillAnimation {

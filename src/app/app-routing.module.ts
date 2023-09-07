@@ -2,18 +2,17 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { OverdoseComponent } from './components/stories/module-stories/overdose/overdose.component';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
-
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, data: {bgColor: 'yellow'}  },
-  { path: 'about', component: AboutComponent },
-  { path: 'stories', component: StoriesComponent, data: {bgColor: 'Green'}},
+  { path: '', component: HomeComponent  },
+  { path: 'contact', component: ContactComponent },
+  { path: 'stories', component: StoriesComponent },
   { path: 'overdose', component: OverdoseComponent },
-  { path: 'subscribe', component: SubscribeComponent, data: {bgColor: 'Orange'} },
+  { path: 'subscribe', component: SubscribeComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

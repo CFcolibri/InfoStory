@@ -2,6 +2,7 @@
   'orange-bg': isRouteActive('/subscribe'),
   'yellow-bg': isRouteActive('/'),
   'green-bg': isRouteActive('/stories'),
+  'blue-bg' : isRouteActive('/contact')
 }" (mousemove)="updateCursorPosition($event)">
   <div class="circle-cursor" [style.left.px]="cursorX" [style.top.px]="cursorY" *ngIf="!isHoveringHeaderNavLinks"></div>
   <main>

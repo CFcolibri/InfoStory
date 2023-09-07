@@ -16,6 +16,7 @@ import { DataOverdoseService } from './_services/data-overdose.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { FormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     FireStoryComponent,
     StoriesComponent,
     OverdoseComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

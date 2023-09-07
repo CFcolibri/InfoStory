@@ -23,7 +23,7 @@
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0 center-nav">
         <li class="nav-item">
           <a class="nav-link" id="stories" [class.active]="isNavLinkActive['stories']" [routerLink]="['/stories']"
-          style="color: rgb(8, 8, 223)"
+          style="color: rgb(8, 8, 223); font-family: Gopher;"
             (click)="setNavLinkActive('stories')" (mouseenter)="onNavLinkHover('stories')" (mouseleave)="onNavLinkLeave('stories')">
             Stories
             <span *ngIf="isNavLinkHovered['stories'] || isNavLinkActive['stories']" class="nav-link-overlay"></span>
@@ -31,7 +31,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="subscribe" [class.active]="isNavLinkActive['subscribe']" [routerLink]="['/subscribe']"
-          style="color: rgb(8, 8, 223)"
+          style="color: rgb(8, 8, 223); font-family: Gopher;"
             (click)="setNavLinkActive('subscribe')" (mouseenter)="onNavLinkHover('subscribe')" (mouseleave)="onNavLinkLeave('subscribe')">
             Subscribe
             <span *ngIf="isNavLinkHovered['subscribe'] || isNavLinkActive['subscribe']" class="nav-link-overlay"></span>
@@ -39,7 +39,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="contact" [class.active]="isNavLinkActive['contact']" [routerLink]="['/contact']"
-          style="color: rgb(8, 8, 223)"
+          style="color: rgb(8, 8, 223); font-family: Gopher;"
             (click)="setNavLinkActive('contact')" (mouseenter)="onNavLinkHover('contact')" (mouseleave)="onNavLinkLeave('contact')">
             Contact
             <span *ngIf="isNavLinkHovered['contact'] || isNavLinkActive['contact']" class="nav-link-overlay"></span>
@@ -51,7 +51,7 @@
             (click)="setNavLinkActive('search')" (mouseenter)="onNavLinkHover('search')" (mouseleave)="onNavLinkLeave('search')"
              style="background-color: transparent; margin-top: 15px;">
               <i class="fa fa-search" style="color: rgb(8, 8, 223)"></i>
-              <span class="ms-1" style="color: rgb(8, 8, 223)">Search</span>
+              <span class="ms-1" style="color: rgb(8, 8, 223); font-family: Gopher;">Search</span>
               <span *ngIf="isNavLinkHovered['search'] || isNavLinkActive['search']" class="nav-link-overlay"></span>
             </a>
           </form>

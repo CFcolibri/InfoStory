@@ -1,5 +1,5 @@
 .orange-bg{
-  background-color: rgb(255, 115, 0);
+  background-color: #ff7300;
 }
 
 .yellow-bg{
@@ -8,6 +8,9 @@
 
 .green-bg{
   background-color: white;
+}
+.blue-bg{
+  background-color: rgb(0, 183, 255);
 }
 
 .circle-cursor {
